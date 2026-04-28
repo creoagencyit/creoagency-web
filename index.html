@@ -636,19 +636,6 @@
     font-weight: 700; color: white; font-size: 14px;
     font-variant-numeric: tabular-nums;
   }
-
-  /* IMMAGINE OVERLAY HERO */
-  #hero-img-overlay {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.35;
-  }
 </style>
 </head>
 <body>
@@ -676,9 +663,6 @@
   <div class="hero-orb orb-1"></div>
   <div class="hero-orb orb-2"></div>
   <div class="hero-orb orb-3"></div>
-
-  <!-- IMMAGINE TEAM OVERLAY -->
-  <img id="hero-img-overlay" src="Create_a_hyper-realistic_202604241822.jpeg" alt="">
 
   <div class="hero-logo-wrap">
     <div class="hero-logo-ring"></div>
@@ -728,6 +712,78 @@
     <div class="scroll-line"></div>
   </div>
 </section>
+
+<!-- VIDEO PORTFOLIO -->
+<section id="portfolio-video">
+  <div class="section-label">I nostri lavori</div>
+  <h2>Video che <em>fanno la differenza.</em></h2>
+  <p style="font-size:18px;color:rgba(255,255,255,0.45);margin-top:16px;max-width:500px;line-height:1.6;">Produzione video, content creation e storytelling per brand che vogliono essere ricordati.</p>
+  <div class="video-grid">
+    <div class="video-card reveal">
+      <iframe src="https://www.youtube.com/embed/wLDVsIeJ6u0?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen loading="lazy"
+        style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+    <div class="video-card reveal">
+      <iframe src="https://www.youtube.com/embed/ubwpllo2K0w?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen loading="lazy"
+        style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+    <div class="video-card reveal">
+      <iframe src="https://www.youtube.com/embed/Qa9ZYPUdTS0?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen loading="lazy"
+        style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+    <div class="video-card reveal">
+      <iframe src="https://www.youtube.com/embed/mSVQ_AMmP-w?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen loading="lazy"
+        style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+
+  <div style="margin-top:16px;display:flex;flex-direction:column;gap:16px;">
+    <div class="video-card reveal" style="aspect-ratio:16/9;max-height:none;width:100%;">
+      <iframe src="https://www.youtube.com/embed/UVPVhErlX3w?vq=hd1080&quality=hd1080&autoplay=0&rel=0&modestbranding=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen loading="lazy" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+    <div class="video-card reveal" style="aspect-ratio:16/9;max-height:none;width:100%;">
+      <iframe src="https://www.youtube.com/embed/owhcsYmRUX4?vq=hd1080&quality=hd1080&autoplay=0&rel=0&modestbranding=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen loading="lazy" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+  </div>
+  <div class="video-cta">
+    <a href="https://www.youtube.com/@creoagencyit" target="_blank" class="btn-youtube">
+      <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+      Vedi tutti i video su YouTube
+    </a>
+    <div class="social-strip">
+      <a href="https://www.instagram.com/creoagency.it/" target="_blank" class="btn-social instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.tiktok.com/@creoagency.it" target="_blank" class="btn-social tiktok">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+        TikTok
+      </a>
+      <a href="#" target="_blank" class="btn-social linkedin">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="#" target="_blank" class="btn-social facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- NUMBERS BAR -->
 <div class="numbers-bar">
@@ -946,76 +1002,6 @@
 </section>
 
 
-<!-- VIDEO PORTFOLIO -->
-<section id="portfolio-video">
-  <div class="section-label">I nostri lavori</div>
-  <h2>Video che <em>fanno la differenza.</em></h2>
-  <p style="font-size:18px;color:rgba(255,255,255,0.45);margin-top:16px;max-width:500px;line-height:1.6;">Produzione video, content creation e storytelling per brand che vogliono essere ricordati.</p>
-  <div class="video-grid">
-    <div class="video-card reveal">
-      <iframe src="https://www.youtube.com/embed/wLDVsIeJ6u0?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen loading="lazy"
-        style="width:100%;height:100%;border:none;display:block;"></iframe>
-    </div>
-    <div class="video-card reveal">
-      <iframe src="https://www.youtube.com/embed/ubwpllo2K0w?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen loading="lazy"
-        style="width:100%;height:100%;border:none;display:block;"></iframe>
-    </div>
-    <div class="video-card reveal">
-      <iframe src="https://www.youtube.com/embed/Qa9ZYPUdTS0?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen loading="lazy"
-        style="width:100%;height:100%;border:none;display:block;"></iframe>
-    </div>
-    <div class="video-card reveal">
-      <iframe src="https://www.youtube.com/embed/mSVQ_AMmP-w?vq=hd1080&autoplay=0&rel=0&modestbranding=1&quality=hd1080" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen loading="lazy"
-        style="width:100%;height:100%;border:none;display:block;"></iframe>
-    </div>
-
-  <div style="margin-top:16px;display:flex;flex-direction:column;gap:16px;">
-    <div class="video-card reveal" style="aspect-ratio:16/9;max-height:none;width:100%;">
-      <iframe src="https://www.youtube.com/embed/UVPVhErlX3w?vq=hd1080&quality=hd1080&autoplay=0&rel=0&modestbranding=1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen loading="lazy" style="width:100%;height:100%;border:none;display:block;"></iframe>
-    </div>
-    <div class="video-card reveal" style="aspect-ratio:16/9;max-height:none;width:100%;">
-      <iframe src="https://www.youtube.com/embed/owhcsYmRUX4?vq=hd1080&quality=hd1080&autoplay=0&rel=0&modestbranding=1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen loading="lazy" style="width:100%;height:100%;border:none;display:block;"></iframe>
-    </div>
-  </div>
-  </div>
-  <div class="video-cta">
-    <a href="https://www.youtube.com/@creoagencyit" target="_blank" class="btn-youtube">
-      <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
-      Vedi tutti i video su YouTube
-    </a>
-    <div class="social-strip">
-      <a href="https://www.instagram.com/creoagency.it/" target="_blank" class="btn-social instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        Instagram
-      </a>
-      <a href="https://www.tiktok.com/@creoagency.it" target="_blank" class="btn-social tiktok">
-        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
-        TikTok
-      </a>
-      <a href="#" target="_blank" class="btn-social linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-      <a href="#" target="_blank" class="btn-social facebook">
-        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        Facebook
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- CONTATTI -->
 <section id="contatti">
   <div class="contact-wrap">
@@ -1139,16 +1125,11 @@
   })();
 
 
-  // CONTATORE VISITE - localStorage
+  // CONTATORE VISITE REALE - counterapi.dev (condiviso tra tutti i visitatori)
   (function() {
-    const BASE = 13200;
-    const KEY  = 'creo_views';
-    var stored = parseInt(localStorage.getItem(KEY)) || BASE;
-    if (!sessionStorage.getItem('creo_counted')) {
-      stored += 1;
-      localStorage.setItem(KEY, stored);
-      sessionStorage.setItem('creo_counted', '1');
-    }
+    const BASE_OFFSET = 13000; // offset per partire da un numero credibile
+    const API = 'https://api.counterapi.dev/v1/creoagency-web/visits/up';
+
     function animateCount(from, to) {
       var el = document.getElementById('visitNum');
       if (!el) return;
@@ -1162,8 +1143,26 @@
       }
       tick();
     }
-    animateCount(stored - 1, stored);
+
+    fetch(API)
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var real = (data.count || 1) + BASE_OFFSET;
+        animateCount(real - 1, real);
+      })
+      .catch(function(){
+        // fallback localStorage se API non raggiungibile
+        var stored = parseInt(localStorage.getItem('creo_v2')) || BASE_OFFSET + 1;
+        if (!sessionStorage.getItem('creo_counted')) {
+          stored++;
+          localStorage.setItem('creo_v2', stored);
+          sessionStorage.setItem('creo_counted', '1');
+        }
+        animateCount(stored - 1, stored);
+      });
   })();
+
+
 
 </script>
 </body>
