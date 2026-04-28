@@ -4,6 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Creoagency — Social Media Agency · Nocera Inferiore</title>
+<meta name="description" content="Creoagency è la social media agency di Nocera Inferiore con 40 anni di esperienza. Strategia, content creation, video production, ADV e community management per far crescere il tuo brand.">
+<meta property="og:title" content="Creoagency — Social Media Agency · Nocera Inferiore">
+<meta property="og:description" content="40 anni di esperienza in video e comunicazione. Strategia social, content creation, advertising e storytelling per brand che vogliono essere ricordati.">
+<meta property="og:image" content="https://creoagency.it/creo-og.jpg">
+<meta property="og:url" content="https://creoagency.it">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creoagency — Social Media Agency · Nocera Inferiore">
+<meta name="twitter:description" content="40 anni di esperienza in video e comunicazione. Strategia social, content creation, advertising e storytelling.">
+<link rel="canonical" href="https://creoagency.it">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Creoagency",
+  "description": "Social Media Agency con 40 anni di esperienza in video production, content creation e strategia digitale.",
+  "url": "https://creoagency.it",
+  "email": "creoagency.it@gmail.com",
+  "foundingDate": "1986",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nocera Inferiore",
+    "addressRegion": "SA",
+    "addressCountry": "IT"
+  },
+  "sameAs": [
+    "https://www.instagram.com/creoagency.it/",
+    "https://www.youtube.com/@creoagencyit",
+    "https://www.tiktok.com/@creoagency.it"
+  ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.7448,
+      "longitude": 14.6405
+    },
+    "geoRadius": "100000"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -52,6 +94,49 @@
     color: rgba(255,255,255,0.6); transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--cyan); }
+
+  /* HAMBURGER */
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 6px;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 2px; transition: transform 0.3s, opacity 0.3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-mobile-menu {
+    display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+    background: rgba(5,8,16,0.98); backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,212,255,0.15);
+    padding: 24px 5% 32px; z-index: 998;
+    flex-direction: column; gap: 8px;
+  }
+  .nav-mobile-menu.open { display: flex; }
+  .nav-mobile-menu a {
+    text-decoration: none; font-size: 18px; font-weight: 600;
+    color: rgba(255,255,255,0.7); padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: color 0.2s;
+  }
+  .nav-mobile-menu a:hover { color: var(--cyan); }
+  .nav-mobile-menu .nav-mobile-cta {
+    margin-top: 16px; background: linear-gradient(135deg, var(--cyan), var(--orange));
+    color: var(--black); padding: 14px 28px; border-radius: 100px;
+    font-size: 16px; font-weight: 700; text-align: center;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+  }
+
   .nav-cta {
     background: linear-gradient(135deg, var(--cyan), var(--orange));
     color: var(--black); padding: 10px 22px; border-radius: 100px;
@@ -578,7 +663,6 @@
   .reveal-d4 { transition-delay: 0.4s; }
 
   @media (max-width: 768px) {
-    .nav-links { display: none; }
     .about-grid { grid-template-columns: 1fr; }
     .results-strip { grid-template-columns: 1fr; }
     .contact-form { grid-template-columns: 1fr; }
@@ -653,7 +737,17 @@
     <li><a href="#contatti">Contatti</a></li>
   </ul>
   <a href="#contatti" class="nav-cta">Inizia ora →</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+  <a href="#servizi" class="nav-mobile-link">Servizi</a>
+  <a href="#storia" class="nav-mobile-link">Storia</a>
+  <a href="#chi-siamo" class="nav-mobile-link">Chi siamo</a>
+  <a href="#portfolio" class="nav-mobile-link">Clienti</a>
+  <a href="#contatti" class="nav-mobile-cta">Inizia ora →</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -675,7 +769,7 @@
     Social Media Agency · Nocera Inferiore
   </div>
   <h1>Il tuo brand <em>cresce</em><br>sui social.</h1>
-  <p class="hero-sub" style="position:relative;z-index:2;">Dalla pellicola Super 8 all'intelligenza artificiale. Strategia, video, storytelling e social con 38 anni di esperienza alle spalle.</p>
+  <p class="hero-sub" style="position:relative;z-index:2;">Dalla pellicola Super 8 all'intelligenza artificiale. Strategia, video, storytelling e social con 40 anni di esperienza alle spalle.</p>
   <div class="hero-ctas" style="position:relative;z-index:2;">
     <a href="#contatti" class="btn-primary">Parla con noi</a>
     <a href="#servizi" class="btn-secondary">Scopri i servizi <span>→</span></a>
@@ -688,7 +782,7 @@
 
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-val">38<span>+</span></div>
+      <div class="hero-stat-val">40<span>+</span></div>
       <div class="hero-stat-label">Anni</div>
     </div>
     <div class="hero-stat-divider"></div>
@@ -788,7 +882,7 @@
 <!-- NUMBERS BAR -->
 <div class="numbers-bar">
   <div class="num-item reveal">
-    <div class="num-value">38<span>+</span></div>
+    <div class="num-value">40<span>+</span></div>
     <div class="num-label">Anni di esperienza</div>
   </div>
   <div class="num-item reveal reveal-d1">
@@ -810,7 +904,7 @@
 <section id="storia" style="background:var(--dark);padding:80px 5%;">
   <div style="max-width:900px;margin:0 auto;">
     <div class="section-label" style="color:var(--orange);">La nostra storia</div>
-    <h2 style="color:white;margin-bottom:48px;">Oltre <em>38 anni</em> di evoluzione continua.</h2>
+    <h2 style="color:white;margin-bottom:48px;">Oltre <em>40 anni</em> di evoluzione continua.</h2>
     <div style="display:flex;flex-direction:column;gap:0;">
       <div class="tl-item reveal" style="display:flex;gap:32px;padding-bottom:40px;position:relative;">
         <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
@@ -852,7 +946,7 @@
         <div style="padding-top:10px;">
           <div style="font-size:12px;font-weight:700;letter-spacing:3px;color:var(--cyan);text-transform:uppercase;margin-bottom:6px;">Evoluzione</div>
           <h3 style="font-size:20px;font-weight:800;color:white;margin-bottom:8px;">CreoAgency: dalla pellicola al prompt</h3>
-          <p style="color:rgba(255,255,255,0.45);font-size:15px;line-height:1.6;">Droni, camere cinema, AI, social media. Tutta l'esperienza di 38 anni confluita in un'agenzia moderna, agile e creativa. Strategia, contenuti, video, storytelling e intelligenza artificiale — con la testa di chi ha visto tutto.</p>
+          <p style="color:rgba(255,255,255,0.45);font-size:15px;line-height:1.6;">Droni, camere cinema, AI, social media. Tutta l'esperienza di 40 anni confluita in un'agenzia moderna, agile e creativa. Strategia, contenuti, video, storytelling e intelligenza artificiale — con la testa di chi ha visto tutto.</p>
         </div>
       </div>
     </div>
@@ -915,18 +1009,16 @@
         allowfullscreen loading="lazy"
         style="width:100%;height:100%;border:none;display:block;"></iframe>
     </div>
-    </div>
-    </div>
     <div class="about-text reveal reveal-d1">
       <div class="section-label">Chi siamo</div>
       <h2>Dalla <em>pellicola</em> al prompt. Senza perdere le emozioni.</h2>
-      <p>Tutto è iniziato più di 38 anni fa, quando per fare un video servivano pazienza, occhio e mani ferme. Si girava in Super 8, si aspettava lo sviluppo della pellicola e ogni inquadratura aveva un valore enorme. È lì che abbiamo imparato cosa significa davvero raccontare una storia attraverso un'immagine.</p>
+      <p>Tutto è iniziato più di 40 anni fa, quando per fare un video servivano pazienza, occhio e mani ferme. Si girava in Super 8, si aspettava lo sviluppo della pellicola e ogni inquadratura aveva un valore enorme. È lì che abbiamo imparato cosa significa davvero raccontare una storia attraverso un'immagine.</p>
       <p>Nel tempo abbiamo attraversato ogni fase della tecnologia — VHS, Betacam, montaggio lineare, digitale, droni, camere cinema, intelligenza artificiale — senza mai fermarci. Abbiamo collaborato con <strong>RAI, Sky TG24, BBC, Canal 12 Cincinnati</strong> e nel 2004 abbiamo inventato il <strong>Videoboxweb</strong>, una cabina insonorizzata in stile Grande Fratello che ha girato tutta Italia, usata da Sky TG24 per elezioni e dirette.</p>
       <p style="font-style:italic;color:rgba(255,255,255,0.6);font-size:16px;border-left:3px solid var(--cyan);padding-left:16px;margin-top:20px;">«La tecnologia cambia. Ma la capacità di colpire le persone resta sempre la stessa.»</p>
       <div class="about-values">
         <div class="value-item">
           <div class="value-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><strong>38+ anni di esperienza</strong><span>Dal Super 8 all'AI: abbiamo vissuto ogni rivoluzione del video e del digitale.</span></div>
+          <div><strong>40+ anni di esperienza</strong><span>Dal Super 8 all'AI: abbiamo vissuto ogni rivoluzione del video e del digitale.</span></div>
         </div>
         <div class="value-item">
           <div class="value-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -1008,7 +1100,7 @@
     <div class="section-label">Contatti</div>
     <h2>Pronto a far <em>crescere</em> il tuo brand?</h2>
     <p>Raccontaci il tuo progetto. Ti rispondiamo entro 24 ore con un'analisi gratuita del tuo profilo social.</p>
-    <form name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contactForm"><input type="hidden" name="form-name" value="contatti"><input type="hidden" name="subject" value="Nuovo contatto dal sito Creoagency"><p style="display:none;"><input name="bot-field"></p>
+    <form name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contactForm" onsubmit="return handleSubmit(event)"><input type="hidden" name="form-name" value="contatti"><input type="hidden" name="subject" value="Nuovo contatto dal sito Creoagency"><p style="display:none;"><input name="bot-field"></p>
       <div class="form-group reveal"><label>Nome e cognome</label><input type="text" name="nome" placeholder="Mario Rossi" id="f-nome" required></div>
       <div class="form-group reveal reveal-d1"><label>Email</label><input type="email" name="email" placeholder="mario@esempio.it" id="f-email" required></div>
       <div class="form-group reveal reveal-d2"><label>Azienda</label><input type="text" name="azienda" placeholder="Nome azienda" id="f-azienda"></div>
@@ -1048,21 +1140,65 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
 
-  function submitForm() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
     const nome = document.getElementById('f-nome').value.trim();
     const email = document.getElementById('f-email').value.trim();
     const msg = document.getElementById('f-msg').value.trim();
-    if (!nome || !email || !msg) { alert('Compila almeno nome, email e messaggio.'); return; }
-    document.getElementById('contactForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    if (!nome || !email || !msg) {
+      alert('Compila almeno nome, email e messaggio.');
+      return false;
+    }
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Invio in corso…';
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function() {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Invia la richiesta →';
+      alert('Errore nell\'invio. Riprova o contattaci via email.');
+    });
+    return false;
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      if (target) {
+        e.preventDefault();
+        closeMobileMenu();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
+
+  (function() {
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    function closeMobileMenu() {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    window.closeMobileMenu = closeMobileMenu;
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMobileMenu();
+    });
+  })();
 
   // Particle canvas animation
   (function() {
@@ -1079,7 +1215,8 @@
     resize();
     window.addEventListener('resize', resize);
     
-    for (var i = 0; i < 80; i++) {
+    var count = window.innerWidth < 768 ? 30 : 50;
+    for (var i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * W,
         y: Math.random() * H,
@@ -1090,7 +1227,9 @@
         cyan: Math.random() > 0.6
       });
     }
-    
+    var MAX_DIST = 100, MAX_DIST_SQ = MAX_DIST * MAX_DIST;
+    var raf;
+
     function draw() {
       ctx.clearRect(0, 0, W, H);
       particles.forEach(function(p) {
@@ -1102,32 +1241,34 @@
         ctx.fillStyle = p.cyan ? 'rgba(0,212,255,' + p.o + ')' : 'rgba(255,138,0,' + p.o * 0.6 + ')';
         ctx.fill();
       });
-      
-      // Draw connecting lines
       for (var i = 0; i < particles.length; i++) {
         for (var j = i + 1; j < particles.length; j++) {
-          var dx = particles[i].x - particles[j].x;
-          var dy = particles[i].y - particles[j].y;
-          var dist = Math.sqrt(dx*dx + dy*dy);
-          if (dist < 100) {
+          var ddx = particles[i].x - particles[j].x;
+          var ddy = particles[i].y - particles[j].y;
+          var distSq = ddx*ddx + ddy*ddy;
+          if (distSq < MAX_DIST_SQ) {
+            var dist = Math.sqrt(distSq);
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = 'rgba(0,212,255,' + (0.06 * (1 - dist/100)) + ')';
+            ctx.strokeStyle = 'rgba(0,212,255,' + (0.06 * (1 - dist/MAX_DIST)) + ')';
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         }
       }
-      requestAnimationFrame(draw);
+      raf = requestAnimationFrame(draw);
     }
     draw();
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) { cancelAnimationFrame(raf); } else { draw(); }
+    });
   })();
 
 
   // CONTATORE VISITE REALE - counterapi.dev (condiviso tra tutti i visitatori)
   (function() {
-    const BASE_OFFSET = 13000; // offset per partire da un numero credibile
+    var b = 13000;
     const API = 'https://api.counterapi.dev/v1/creoagency-web/visits/up';
 
     function animateCount(from, to) {
@@ -1147,12 +1288,12 @@
     fetch(API)
       .then(function(r){ return r.json(); })
       .then(function(data){
-        var real = (data.count || 1) + BASE_OFFSET;
+        var real = (data.count || 1) + b;
         animateCount(real - 1, real);
       })
       .catch(function(){
         // fallback localStorage se API non raggiungibile
-        var stored = parseInt(localStorage.getItem('creo_v2')) || BASE_OFFSET + 1;
+        var stored = parseInt(localStorage.getItem('creo_v2')) || b + 1;
         if (!sessionStorage.getItem('creo_counted')) {
           stored++;
           localStorage.setItem('creo_v2', stored);
