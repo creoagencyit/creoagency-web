@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creoagency — Mockup Restyling</title>
+<style>
+  :root{
+    --bg:#0a0908;
+    --bg2:#141210;
+    --ink:#f5f1ea;
+    --ink-dim:rgba(245,241,234,0.55);
+    --ink-faint:rgba(245,241,234,0.32);
+    --gold:#c9a15a;
+    --line:rgba(245,241,234,0.1);
+    --serif:'Georgia','Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .label{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-0.01em;}
+  em{color:var(--gold);font-style:normal;}
+
+  /* MOCKUP BANNER */
+  .mockup-banner{background:var(--gold);color:#1a1408;text-align:center;padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:0.02em;}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(10,9,8,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .nav-logo{font-family:var(--serif);font-size:22px;letter-spacing:0.02em;}
+  .nav-links{display:flex;gap:36px;list-style:none;font-size:14px;color:var(--ink-dim);}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{border:1px solid var(--gold);color:var(--gold);padding:10px 22px;font-size:13px;letter-spacing:0.03em;}
+  @media(max-width:860px){.nav-links{display:none;}}
+
+  /* HERO */
+  .hero{padding:110px 0 90px;text-align:center;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:500px;background:radial-gradient(circle,rgba(201,161,90,0.14),transparent 70%);}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:28px;position:relative;}
+  .hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  .hero h1{font-size:clamp(40px,6vw,76px);line-height:1.05;max-width:900px;margin:0 auto 26px;position:relative;}
+  .hero-sub{max-width:560px;margin:0 auto 44px;color:var(--ink-dim);font-size:18px;position:relative;}
+  .hero-ctas{display:flex;gap:16px;justify-content:center;position:relative;flex-wrap:wrap;}
+  .btn-primary{background:var(--gold);color:#1a1408;padding:16px 32px;font-size:14px;font-weight:600;letter-spacing:0.02em;}
+  .btn-secondary{border:1px solid var(--line);color:var(--ink);padding:16px 32px;font-size:14px;letter-spacing:0.02em;}
+
+  /* STATS STRIP */
+  .stats{display:flex;justify-content:center;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:60px;}
+  .stat{flex:1;max-width:220px;text-align:center;padding:32px 16px;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat-val{font-family:var(--serif);font-size:34px;color:var(--gold);}
+  .stat-label{font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:6px;}
+  @media(max-width:700px){.stats{flex-wrap:wrap;}.stat{flex:1 1 50%;max-width:none;border-right:none;border-bottom:1px solid var(--line);}}
+
+  /* SOCIAL PROOF — moved right after hero */
+  .proof{padding:90px 0;text-align:center;}
+  .proof h2{font-size:clamp(28px,4vw,42px);max-width:700px;margin:0 auto 50px;}
+  .proof-logos{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:900px;margin:0 auto;}
+  .proof-logo{border:1px solid var(--line);padding:10px 20px;font-size:14px;color:var(--ink-dim);border-radius:2px;}
+  .tv-strip{margin-top:56px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;font-family:var(--serif);font-size:22px;color:var(--ink-faint);letter-spacing:0.04em;}
+
+  /* SECTION generic */
+  section{padding:100px 0;}
+  .section-head{max-width:640px;margin-bottom:60px;}
+  .section-head h2{font-size:clamp(28px,4vw,42px);margin-top:6px;}
+  .section-head p{color:var(--ink-dim);font-size:17px;margin-top:16px;}
+  .alt-bg{background:var(--bg2);}
+
+  /* SERVICES */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .service-card{background:var(--bg);padding:40px 32px;}
+  .service-num{font-family:var(--serif);font-size:14px;color:var(--gold);margin-bottom:20px;}
+  .service-card h3{font-size:20px;margin-bottom:12px;}
+  .service-card p{color:var(--ink-dim);font-size:15px;}
+  @media(max-width:860px){.services-grid{grid-template-columns:1fr;}}
+
+  /* VIDEO */
+  .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .video-card{aspect-ratio:9/16;background:#000;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:13px;position:relative;overflow:hidden;}
+  .video-card::after{content:"▶";position:absolute;font-size:28px;color:var(--gold);}
+  @media(max-width:860px){.video-grid{grid-template-columns:repeat(3,1fr);gap:8px;}}
+
+  /* STORY */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+  .story h2{font-size:clamp(30px,4vw,46px);margin-bottom:24px;}
+  .story p{color:var(--ink-dim);margin-bottom:18px;font-size:16px;}
+  .story-quote{border-left:2px solid var(--gold);padding-left:20px;font-family:var(--serif);font-style:italic;color:var(--ink);margin-top:28px;font-size:18px;}
+  .story-img{aspect-ratio:4/3;background:linear-gradient(135deg,#1a1712,#0a0908);border:1px solid var(--line);}
+  @media(max-width:860px){.story{grid-template-columns:1fr;gap:40px;}}
+
+  /* RESULTS */
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .result-card{background:var(--bg);padding:44px 32px;text-align:center;}
+  .result-metric{font-family:var(--serif);font-size:44px;color:var(--gold);}
+  .result-label{color:var(--ink-dim);font-size:14px;margin-top:12px;}
+  @media(max-width:860px){.results-grid{grid-template-columns:1fr;}}
+
+  /* CONTACT */
+  .contact{text-align:center;}
+  .contact h2{font-size:clamp(30px,5vw,50px);max-width:700px;margin:0 auto 20px;}
+  .contact p{color:var(--ink-dim);max-width:480px;margin:0 auto 40px;}
+
+  footer{border-top:1px solid var(--line);padding:50px 0;text-align:center;color:var(--ink-faint);font-size:13px;}
+  footer a{color:var(--ink-dim);margin:0 10px;}
+
+  /* MOBILE STICKY CTA */
+  .sticky-cta{position:fixed;bottom:0;left:0;right:0;background:var(--gold);color:#1a1408;text-align:center;padding:14px;font-size:14px;font-weight:600;z-index:60;display:none;}
+  @media(max-width:700px){.sticky-cta{display:block;}body{padding-bottom:52px;}}
+</style>
+</head>
+<body>
+
+<div class="mockup-banner">MOCKUP — proposta di restyling, non ancora live</div>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-logo">Creoagency</div>
+    <ul class="nav-links">
+      <li><a href="#proof">Clienti</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#storia">Chi siamo</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+    <a href="#contatti" class="nav-cta">Parla con noi</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-badge"><span></span>Social Media Agency · Nocera Inferiore</div>
+    <h1>Il tuo brand <em>cresce</em> sui social.</h1>
+    <p class="hero-sub">Dalla pellicola Super 8 all'intelligenza artificiale. Strategia, video, storytelling e social con 40 anni di esperienza alle spalle.</p>
+    <div class="hero-ctas">
+      <a href="#contatti" class="btn-primary">Parla con noi →</a>
+      <a href="#servizi" class="btn-secondary">Scopri i servizi</a>
+    </div>
+  </div>
+  <div class="stats wrap" style="max-width:900px;">
+    <div class="stat"><div class="stat-val">40+</div><div class="stat-label">Anni</div></div>
+    <div class="stat"><div class="stat-val">3M+</div><div class="stat-label">Impression</div></div>
+    <div class="stat"><div class="stat-val">36+</div><div class="stat-label">Brand</div></div>
+    <div class="stat"><div class="stat-val">RAI · BBC</div><div class="stat-label">Partner TV</div></div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF moved right after hero, before Servizi -->
+<section class="proof alt-bg" id="proof">
+  <div class="wrap">
+    <div class="label" style="text-align:center;">Portfolio & Clienti</div>
+    <h2>Brand che hanno scelto di <em>crescere</em> con noi.</h2>
+    <div class="proof-logos">
+      <div class="proof-logo">CONDOR Spa</div>
+      <div class="proof-logo">Electrolux Professional</div>
+      <div class="proof-logo">Unifarco</div>
+      <div class="proof-logo">Sartoretto Verna</div>
+      <div class="proof-logo">Confindustria Bulgaria</div>
+      <div class="proof-logo">Holding D'Andrea</div>
+      <div class="proof-logo">+ altri 28 brand</div>
+    </div>
+    <div class="tv-strip">
+      <span>RAI</span><span>Sky TG24</span><span>BBC</span>
+    </div>
+  </div>
+</section>
+
+<section id="servizi">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">Cosa facciamo</div>
+      <h2>Tutto quello che serve per <em>dominare</em> i social</h2>
+      <p>Un team completo al tuo fianco, dalla strategia all'esecuzione.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-num">01</div><h3>Social Strategy</h3><p>Analizziamo il tuo brand, il mercato e la concorrenza per costruire una strategia vincente e misurabile.</p></div>
+      <div class="service-card"><div class="service-num">02</div><h3>Content Creation</h3><p>Video, grafiche e copy che fermano lo scroll. Contenuti ottimizzati per Instagram, TikTok, LinkedIn e Facebook.</p></div>
+      <div class="service-card"><div class="service-num">03</div><h3>Community Management</h3><p>Gestiamo la tua community ogni giorno: risposte, commenti, DM e moderazione.</p></div>
+      <div class="service-card"><div class="service-num">04</div><h3>Advertising & ADV</h3><p>Campagne Meta Ads, TikTok Ads e Google che convertono. Budget ottimizzato, ROI tracciato.</p></div>
+      <div class="service-card"><div class="service-num">05</div><h3>Analytics & Report</h3><p>Dashboard personalizzati e report mensili chiari su risultati e investimento.</p></div>
+      <div class="service-card"><div class="service-num">06</div><h3>Influencer Marketing</h3><p>Selezioniamo i creator giusti per il tuo brand: collaborazioni autentiche.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg" id="video">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">I nostri lavori</div>
+      <h2>Video che <em>fanno la differenza.</em></h2>
+      <p>Produzione video, content creation e storytelling per brand che vogliono essere ricordati.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">video 1</div>
+      <div class="video-card">video 2</div>
+      <div class="video-card">video 3</div>
+    </div>
+  </div>
+</section>
+
+<section id="storia">
+  <div class="wrap story">
+    <div>
+      <div class="label">Chi siamo</div>
+      <h2>Dalla <em>pellicola</em> al prompt.</h2>
+      <p>Tutto è iniziato più di 40 anni fa, quando per fare un video servivano pazienza, occhio e mani ferme. Si girava in Super 8, si aspettava lo sviluppo della pellicola e ogni inquadratura aveva un peso.</p>
+      <p>Nel tempo abbiamo attraversato ogni fase della tecnologia — VHS, Betacam, montaggio lineare, digitale, droni, camere cinema, intelligenza artificiale — senza mai fermarci.</p>
+      <div class="story-quote">«La tecnologia cambia. Ma la capacità di colpire le persone resta la stessa.»</div>
+    </div>
+    <div class="story-img"></div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">Risultati</div>
+      <h2>Numeri, non promesse.</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-card"><div class="result-metric">+340%</div><div class="result-label">Crescita follower organici in 6 mesi per un brand lifestyle</div></div>
+      <div class="result-card"><div class="result-metric">2.1M</div><div class="result-label">Impression raggiunte con campagna ADV da €3.000</div></div>
+      <div class="result-card"><div class="result-metric">4.8x</div><div class="result-label">ROAS medio sulle campagne e-commerce gestite nel 2024</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contatti">
+  <div class="wrap">
+    <div class="label" style="text-align:center;">Contatti</div>
+    <h2>Pronto a far <em>crescere</em> il tuo brand?</h2>
+    <p>Raccontaci il tuo progetto. Ti rispondiamo entro 24 ore con un'analisi gratuita del tuo profilo social.</p>
+    <a href="#" class="btn-primary">Richiedi analisi gratuita →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Creoagency · Nocera Inferiore (SA)</div>
+    <div style="margin-top:14px;">
+      <a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">TikTok</a><a href="#">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">Parla con noi →</div>
+
+</body>
+</html>
